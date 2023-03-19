@@ -27328,11 +27328,16 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$bfed.prelude(module);
 
 try {
-//Logo and Title
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Title", ()=>Title);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const loggedInUser = ()=>{
+    //API call to check authentication
+    return true;
+};
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27341,23 +27346,25 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             src: "https://cdn.worldvectorlogo.com/logos/swiggy-1.svg"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 3,
+            lineNumber: 10,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 2,
+        lineNumber: 9,
         columnNumber: 28
     }, undefined);
 _c = Title;
 //Navigation Bar 
 const Header = ()=>{
+    _s();
+    const [isLoggedIn, setIsLoggedIn] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 9,
+                lineNumber: 17,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27368,48 +27375,68 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 12,
+                            lineNumber: 20,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 13,
+                            lineNumber: 21,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 14,
+                            lineNumber: 22,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 15,
+                            lineNumber: 23,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 11,
+                    lineNumber: 19,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 10,
+                lineNumber: 18,
                 columnNumber: 13
+            }, undefined),
+            isLoggedIn ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    setIsLoggedIn(false);
+                },
+                children: "Logout"
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 26,
+                columnNumber: 27
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    setIsLoggedIn(true);
+                },
+                children: "Login"
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 28,
+                columnNumber: 26
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 8,
+        lineNumber: 16,
         columnNumber: 10
     }, undefined);
 };
+_s(Header, "g0MSgNVZk+vKiEFnDJ9VPEfswFA=");
 _c1 = Header;
 exports.default = Header;
 var _c, _c1;
@@ -27421,7 +27448,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"8yaV8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27435,23 +27462,46 @@ var _react = require("react");
 var _constants = require("../constants");
 var _restuarantCard = require("./RestuarantCard");
 var _restuarantCardDefault = parcelHelpers.interopDefault(_restuarantCard);
+var _shimmer = require("./Shimmer"); /* This is default export */ 
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
+// Filter the restaurant data according input type
 function filterData(searchInput, restaurants) {
-    return restaurants.filter((restaurant)=>restaurant.data.name.includes(searchInput));
+    const filterData = restaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchInput.toLowerCase()));
+    return filterData;
 }
+// Body Component for body section: It contain all restaurant cards
 const Body = ()=>{
     _s();
-    const [restaurants, setRestaurants] = (0, _react.useState)((0, _constants.restuarantList));
+    // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
+    const [allRestuarants, setAllRestaurants] = (0, _react.useState)([]);
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
     const [searchInput, setSearchInput] = (0, _react.useState)("");
+    // use useEffect for one time call getRestaurants using empty dependency array
     (0, _react.useEffect)(()=>{
         getRestaurants();
     }, []);
+    // async function getRestaurant to fetch Swiggy API data
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.1805298&lng=75.8629042&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch((0, _constants.swiggy_api_URL));
         const json = await data.json();
-        setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    // if allRestaurants is empty don't render restaurants cards
+    if (!allRestuarants) return null;
+    if (filteredRestaurants?.length == 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "No Restaurant match your filter!! "
+    }, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 33,
+        columnNumber: 48
+    }, undefined);
+    return filteredRestaurants?.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 34,
+        columnNumber: 45
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
@@ -27465,36 +27515,36 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 20,
+                        lineNumber: 36,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "search-btn",
                         onClick: ()=>{
-                            const data = filterData(searchInput, restaurants);
-                            setRestaurants(data);
+                            const data = filterData(searchInput, allRestuarants);
+                            setFilteredRestaurants(data);
                         },
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 23,
+                        lineNumber: 39,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 19,
+                lineNumber: 35,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-list",
-                children: restaurants.map((restaurant)=>{
+                children: filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _restuarantCardDefault.default), {
                         ...restaurant.data,
                         key: restaurant.data.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 32,
+                            lineNumber: 48,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27502,13 +27552,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 30,
+                lineNumber: 46,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "AWqf3icN0g8+wwNNIgQArZuHLX8=");
+_s(Body, "7J+LUrNotSx5b4TOEHdpavBU0hk=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -27519,7 +27569,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestuarantCard":"iElQb","../constants":"3huJa"}],"iElQb":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestuarantCard":"iElQb","../constants":"3huJa","./Shimmer":"g6ZGj"}],"iElQb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6629 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27586,8 +27636,10 @@ $RefreshReg$(_c, "RestuarantCard");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_CON_URL", ()=>IMG_CON_URL);
+parcelHelpers.export(exports, "swiggy_api_URL", ()=>swiggy_api_URL);
 parcelHelpers.export(exports, "restuarantList", ()=>restuarantList);
 const IMG_CON_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const swiggy_api_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.1805298&lng=75.8629042&page_type=DESKTOP_WEB_LISTING";
 const restuarantList = [
     {
         "type": "restaurant",
@@ -29472,7 +29524,36 @@ const restuarantList = [
 ];
 exports.default = restuarantList;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pPOA":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Shimmer UI loading"
+    }, void 0, false, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
