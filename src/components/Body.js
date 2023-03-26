@@ -34,10 +34,6 @@ const Body = () => {
     // if allRestaurants is empty don't render restaurants cards
     if(!allRestuarants) return null;
 
-    if(filteredRestaurants?. length==0) 
-        return <h1>No Restaurant match your filter!! </h1>;
-
-
     return filteredRestaurants?.length == 0 ? ( 
     <Shimmer/>
     ) : (
