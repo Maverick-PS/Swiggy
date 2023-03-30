@@ -1,6 +1,6 @@
-import {IMG_CON_URL} from "../constants";
+import {IMG_CDN_URL} from "../constants";
 
-const RestuarantCard = ({
+const RestaurantCard = ({
     name,
     cuisines,
     cloudinaryImageId,
@@ -8,7 +8,7 @@ const RestuarantCard = ({
 }) => {
     return (
         <div className="card">
-            <img src={IMG_CON_URL + cloudinaryImageId}/>
+            <img src={IMG_CDN_URL + cloudinaryImageId}/>
             <h2>{name}</h2>
             <h3>{cuisines.join(", ")}</h3>
             <h4>⭐{avgRating}</h4>
@@ -16,4 +16,4 @@ const RestuarantCard = ({
     );
 };
 
-export default RestuarantCard;
+export default RestaurantCard;
