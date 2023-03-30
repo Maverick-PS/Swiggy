@@ -2938,6 +2938,14 @@ var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _about = require("./components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
+var _contact = require("./components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _error = require("./components/Error");
+var _errorDefault = parcelHelpers.interopDefault(_error);
+var _restaurantMenu = require("./components/RestaurantMenu");
+var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
+var _profile = require("./components/Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
 var _reactRouterDom = require("react-router-dom");
 const AppLayout = ()=>{
     return(// React.Fragment
@@ -2945,17 +2953,17 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 12,
+                lineNumber: 16,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 13,
+                lineNumber: 17,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 18,
                 columnNumber: 13
             }, undefined)
         ]
@@ -2967,17 +2975,58 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 20,
+            lineNumber: 24,
             columnNumber: 12
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+        }, undefined),
+        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
-            columnNumber: 12
-        }, undefined)
+            lineNumber: 25,
+            columnNumber: 17
+        }, undefined),
+        children: [
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 28,
+                    columnNumber: 14
+                }, undefined),
+                children: [
+                    {
+                        path: "profile",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 31,
+                            columnNumber: 16
+                        }, undefined)
+                    }
+                ]
+            },
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 35,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 38,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
+                path: "/restuarant/:resId",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 41,
+                    columnNumber: 14
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -2985,7 +3034,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: AppRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 26,
+    lineNumber: 45,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -2996,7 +3045,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","./components/About":"9R1Eu","react-router-dom":"9xmpe"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","./components/About":"9R1Eu","react-router-dom":"9xmpe","./components/Contact":"cgAOG","./components/Error":"kvula","./components/RestaurantMenu":"8PuJ6","./components/Profile":"h0rtF"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("98d71713d3fe00cb");
 
@@ -27356,6 +27405,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Title", ()=>Title);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const loggedInUser = ()=>{
     //API call to check authentication
@@ -27369,12 +27419,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             src: "https://cdn.worldvectorlogo.com/logos/swiggy-1.svg"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 28
     }, undefined);
 _c = Title;
@@ -27387,7 +27437,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27395,42 +27445,69 @@ const Header = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 20,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About Us"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 22,
+                                columnNumber: 25
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 21,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/About",
+                                children: "About"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 25,
+                                columnNumber: 25
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 22,
+                            lineNumber: 24,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/Contact",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 28,
+                                columnNumber: 25
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 23,
+                            lineNumber: 27,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                children: "Cart"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 31,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 30,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 19,
+                    lineNumber: 20,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 18,
+                lineNumber: 19,
                 columnNumber: 13
             }, undefined),
             isLoggedIn ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27440,7 +27517,7 @@ const Header = ()=>{
                 children: "Logout"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 26,
+                lineNumber: 35,
                 columnNumber: 27
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>{
@@ -27449,13 +27526,13 @@ const Header = ()=>{
                 children: "Login"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 28,
+                lineNumber: 37,
                 columnNumber: 26
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 16,
+        lineNumber: 17,
         columnNumber: 10
     }, undefined);
 };
@@ -27471,2170 +27548,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _constants = require("../constants");
-var _restuarantCard = require("./RestuarantCard");
-var _restuarantCardDefault = parcelHelpers.interopDefault(_restuarantCard);
-var _shimmer = require("./Shimmer"); /* This is default export */ 
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _s = $RefreshSig$();
-// Filter the restaurant data according input type
-function filterData(searchInput, restaurants) {
-    const filterData = restaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchInput.toLowerCase()));
-    return filterData;
-}
-// Body Component for body section: It contain all restaurant cards
-const Body = ()=>{
-    _s();
-    // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
-    const [allRestuarants, setAllRestaurants] = (0, _react.useState)([]);
-    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
-    const [searchInput, setSearchInput] = (0, _react.useState)("");
-    // use useEffect for one time call getRestaurants using empty dependency array
-    (0, _react.useEffect)(()=>{
-        getRestaurants();
-    }, []);
-    // async function getRestaurant to fetch Swiggy API data
-    async function getRestaurants() {
-        const data = await fetch((0, _constants.swiggy_api_URL));
-        const json = await data.json();
-        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    }
-    // if allRestaurants is empty don't render restaurants cards
-    if (!allRestuarants) return null;
-    return filteredRestaurants?.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 33,
-        columnNumber: 45
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "search-container",
-                        placeholder: "Search",
-                        value: searchInput,
-                        onChange: (e)=>{
-                            setSearchInput(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 35,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "search-btn",
-                        onClick: ()=>{
-                            const data = filterData(searchInput, allRestuarants);
-                            setFilteredRestaurants(data);
-                        },
-                        children: "Search"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 38,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 34,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-list",
-                children: filteredRestaurants.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _restuarantCardDefault.default), {
-                        ...restaurant.data,
-                        key: restaurant.data.id,
-                        __source: {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 47,
-                            columnNumber: 16
-                        },
-                        __self: undefined
-                    });
-                })
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 45,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "7J+LUrNotSx5b4TOEHdpavBU0hk=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestuarantCard":"iElQb","../constants":"3huJa","./Shimmer":"g6ZGj"}],"iElQb":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6629 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6629.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _constants = require("../constants");
-const RestuarantCard = ({ name , cuisines , cloudinaryImageId , avgRating  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _constants.IMG_CON_URL) + cloudinaryImageId
-            }, void 0, false, {
-                fileName: "src/components/RestuarantCard.js",
-                lineNumber: 9,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestuarantCard.js",
-                lineNumber: 10,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines.join(", ")
-            }, void 0, false, {
-                fileName: "src/components/RestuarantCard.js",
-                lineNumber: 11,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    "⭐",
-                    avgRating
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestuarantCard.js",
-                lineNumber: 12,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RestuarantCard.js",
-        lineNumber: 8,
-        columnNumber: 10
-    }, undefined);
-};
-_c = RestuarantCard;
-exports.default = RestuarantCard;
-var _c;
-$RefreshReg$(_c, "RestuarantCard");
-
-  $parcel$ReactRefreshHelpers$6629.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../constants":"3huJa"}],"3huJa":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CON_URL", ()=>IMG_CON_URL);
-parcelHelpers.export(exports, "swiggy_api_URL", ()=>swiggy_api_URL);
-parcelHelpers.export(exports, "restuarantList", ()=>restuarantList);
-const IMG_CON_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const swiggy_api_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.1805298&lng=75.8629042&page_type=DESKTOP_WEB_LISTING";
-const restuarantList = [
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "458201",
-            "name": "KFC",
-            "uuid": "33ccacd2-97a3-4813-887f-5265bb2c13d7",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "500+ ratings",
-            "cloudinaryImageId": "bdcd233971b7c81bf77e1fa4471280eb",
-            "cuisines": [
-                "Burgers",
-                "Biryani",
-                "American",
-                "Snacks",
-                "Fast Food"
-            ],
-            "tags": [],
-            "costForTwo": 40000,
-            "costForTwoString": "₹400 FOR TWO",
-            "deliveryTime": 29,
-            "minDeliveryTime": 29,
-            "maxDeliveryTime": 29,
-            "slaString": "29 MINS",
-            "lastMileTravel": 2.799999952316284,
-            "slugs": {
-                "restaurant": "kfc-vrindavan-yojna-1-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "16/CP-201,UGF-Near SGPGI, Vrindavan colony, Lucknow, Uttar Pradesh",
-            "locality": "Vrindavan Twp Main Road",
-            "parentId": 547,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "FREE DELIVERY",
-                "shortDescriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=6136736~p=1~eid=00000186-b650-f163-1338-4d7800e40141",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2.7 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "458201",
-                "deliveryTime": 29,
-                "minDeliveryTime": 29,
-                "maxDeliveryTime": 29,
-                "lastMileTravel": 2.799999952316284,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "4.2",
-            "totalRatings": 500,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "421564",
-            "name": "Pizza Hut",
-            "uuid": "5de229f8-76b2-4d67-847f-91b37ccff22e",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "500+ ratings",
-            "cloudinaryImageId": "sip4j7ih42xql1owikx6",
-            "cuisines": [
-                "Pizzas"
-            ],
-            "tags": [],
-            "costForTwo": 35000,
-            "costForTwoString": "₹350 FOR TWO",
-            "deliveryTime": 32,
-            "minDeliveryTime": 32,
-            "maxDeliveryTime": 32,
-            "slaString": "32 MINS",
-            "lastMileTravel": 2.799999952316284,
-            "slugs": {
-                "restaurant": "pizza-hut-vrindavan-yojn-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "Pizza Hut at Showroom No- 2, 16/ CP-201, UGF, Sector- 16, Vrindavan Colony, Near SGPGI, Rai Bareilly Road,Nagar Nigam Food Safety Zone-10, Lucknow, UP, 226025",
-            "locality": "Sector 16",
-            "parentId": 721,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "FREE DELIVERY",
-                "shortDescriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2.7 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "421564",
-                "deliveryTime": 32,
-                "minDeliveryTime": 32,
-                "maxDeliveryTime": 32,
-                "lastMileTravel": 2.799999952316284,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.5",
-            "totalRatings": 500,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "138854",
-            "name": "Madhurima Veg",
-            "uuid": "e9ded1a7-55d5-49fb-a50e-25ff1e69e09f",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "10000+ ratings",
-            "cloudinaryImageId": "gzflgrln6f3dcylcdxji",
-            "cuisines": [
-                "Indian",
-                "South Indian",
-                "Chinese",
-                "Snacks"
-            ],
-            "tags": [],
-            "costForTwo": 20000,
-            "costForTwoString": "₹200 FOR TWO",
-            "deliveryTime": 41,
-            "minDeliveryTime": 41,
-            "maxDeliveryTime": 41,
-            "slaString": "41 MINS",
-            "lastMileTravel": 3,
-            "slugs": {
-                "restaurant": "madhurima-veg-ashiyana-ashiyana",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "opposite PGI, Telibagh",
-            "locality": "Lucknow - Prayagraj Road",
-            "parentId": 7799,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "40% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "40% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "40% off up to ₹80 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "40% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "40% off up to ₹80 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "3 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "138854",
-                "deliveryTime": 41,
-                "minDeliveryTime": 41,
-                "maxDeliveryTime": 41,
-                "lastMileTravel": 3,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "4.1",
-            "totalRatings": 10000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "164643",
-            "name": "Lucknow Street Food",
-            "uuid": "2676deb7-1085-4371-bd6d-945ccbbf8510",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "1000+ ratings",
-            "cloudinaryImageId": "axbtcwpeshiaovgr4uto",
-            "cuisines": [
-                "Chinese",
-                "Fast Food",
-                "Snacks",
-                "Italian",
-                "Use Code NBC20 to Avail"
-            ],
-            "tags": [],
-            "costForTwo": 15000,
-            "costForTwoString": "₹150 FOR TWO",
-            "deliveryTime": 37,
-            "minDeliveryTime": 37,
-            "maxDeliveryTime": 37,
-            "slaString": "37 MINS",
-            "lastMileTravel": 5.800000190734863,
-            "slugs": {
-                "restaurant": "lucknow-street-food-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "7c/318 Vraindavan colony telibagh lucknow",
-            "locality": "Vraindavan colony",
-            "parentId": 126523,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "50% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "50% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "50% off up to ₹100 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "50% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "50% off up to ₹100 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=6060258~p=4~eid=00000186-b650-f163-1338-4d7900e4047c",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "5.8 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "164643",
-                "deliveryTime": 37,
-                "minDeliveryTime": 37,
-                "maxDeliveryTime": 37,
-                "lastMileTravel": 5.800000190734863,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "3.7",
-            "totalRatings": 1000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "145815",
-            "name": "M&H Bakery by Madhurima",
-            "uuid": "c45ed45c-68df-4d6d-a1e5-bfab0df93a68",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "1000+ ratings",
-            "cloudinaryImageId": "hqbblwmrt8jtir75bxiz",
-            "cuisines": [
-                "Bakery",
-                "Snacks",
-                "Desserts"
-            ],
-            "tags": [],
-            "costForTwo": 20000,
-            "costForTwoString": "₹200 FOR TWO",
-            "deliveryTime": 37,
-            "minDeliveryTime": 37,
-            "maxDeliveryTime": 37,
-            "slaString": "37 MINS",
-            "lastMileTravel": 3,
-            "slugs": {
-                "restaurant": "mh-bakery-by-madhurima-ashiyana-ashiyana",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "opposite PGI, Telibagh",
-            "locality": "Lucknow - Prayagraj Road",
-            "parentId": 8218,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "60% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "60% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "60% off up to ₹120 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "60% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "60% off up to ₹120 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "3 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "145815",
-                "deliveryTime": 37,
-                "minDeliveryTime": 37,
-                "maxDeliveryTime": 37,
-                "lastMileTravel": 3,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "4.3",
-            "totalRatings": 1000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "145817",
-            "name": "Madhurima Sweets",
-            "uuid": "abdec8c8-17d2-4352-94a5-0c5d94154b71",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "5000+ ratings",
-            "cloudinaryImageId": "aivado0ln2ebocreismg",
-            "cuisines": [
-                "Sweets",
-                "Indian",
-                "Desserts",
-                "Snacks"
-            ],
-            "tags": [],
-            "costForTwo": 20000,
-            "costForTwoString": "₹200 FOR TWO",
-            "deliveryTime": 45,
-            "minDeliveryTime": 45,
-            "maxDeliveryTime": 45,
-            "slaString": "45 MINS",
-            "lastMileTravel": 3,
-            "slugs": {
-                "restaurant": "madhurima-sweets-ashiyana-ashiyana",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "opposite PGI, Telibagh",
-            "locality": "Lucknow - Prayagraj Road",
-            "parentId": 8217,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "40% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "40% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "40% off up to ₹80 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "40% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "40% off up to ₹80 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "3 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "145817",
-                "deliveryTime": 45,
-                "minDeliveryTime": 45,
-                "maxDeliveryTime": 45,
-                "lastMileTravel": 3,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "4.3",
-            "totalRatings": 5000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "74901",
-            "name": "Shri Ganpati Sweets & Restaurant",
-            "uuid": "475e0535-38ab-4e9c-add0-f5f925321537",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "10000+ ratings",
-            "cloudinaryImageId": "rfpfbgnw7qjiggcy4epk",
-            "cuisines": [
-                "North Indian",
-                "South Indian",
-                "Chinese"
-            ],
-            "tags": [],
-            "costForTwo": 30000,
-            "costForTwoString": "₹300 FOR TWO",
-            "deliveryTime": 35,
-            "minDeliveryTime": 35,
-            "maxDeliveryTime": 35,
-            "slaString": "35 MINS",
-            "lastMileTravel": 4.699999809265137,
-            "slugs": {
-                "restaurant": "shri-ganpati-sweets-restaurant-mohanlalganj-ashiyana",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "Uthrathia Bazar, Near Shaheed Path, Raebareli Road, Lucknow",
-            "locality": "Raebareli Road",
-            "parentId": 11326,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "40% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "40% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "40% off up to ₹80 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "40% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "40% off up to ₹80 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=6102499~p=7~eid=00000186-b650-f163-1338-4d7a00e40730",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "4.6 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "74901",
-                "deliveryTime": 35,
-                "minDeliveryTime": 35,
-                "maxDeliveryTime": 35,
-                "lastMileTravel": 4.699999809265137,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "4.1",
-            "totalRatings": 10000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "311009",
-            "name": "B.com chai wala",
-            "uuid": "8a5ebbcf-2ad2-476f-9a2a-ecf4d4f87c59",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "100+ ratings",
-            "cloudinaryImageId": "cwhgzjubxvew7fqzu7tu",
-            "cuisines": [
-                "Beverages",
-                "Indian"
-            ],
-            "tags": [],
-            "costForTwo": 30000,
-            "costForTwoString": "₹300 FOR TWO",
-            "deliveryTime": 41,
-            "minDeliveryTime": 41,
-            "maxDeliveryTime": 41,
-            "slaString": "41 MINS",
-            "lastMileTravel": 2.0999999046325684,
-            "slugs": {
-                "restaurant": "bun-makhan-chai-mohanlalganj-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "Kanchan Sachdeva, 551/Jha/200 Hariyar Prasad Nagar Alambagh, Lucknow, District - Lucknow, STATE - Uttar Pradesh",
-            "locality": "Hariyar Prasad Nagar",
-            "parentId": 281170,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "FREE DELIVERY",
-                "shortDescriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "311009",
-                "deliveryTime": 41,
-                "minDeliveryTime": 41,
-                "maxDeliveryTime": 41,
-                "lastMileTravel": 2.0999999046325684,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.7",
-            "totalRatings": 100,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "310444",
-            "name": "Mom's Kitchen",
-            "uuid": "200cf4f3-8ae4-4409-be8d-2f112af04ab5",
-            "city": "15",
-            "area": "Alambagh",
-            "totalRatingsString": "50+ ratings",
-            "cloudinaryImageId": "csmqad80krrem8aib9z1",
-            "cuisines": [
-                "Indian"
-            ],
-            "tags": [],
-            "costForTwo": 30000,
-            "costForTwoString": "₹300 FOR TWO",
-            "deliveryTime": 37,
-            "minDeliveryTime": 37,
-            "maxDeliveryTime": 37,
-            "slaString": "37 MINS",
-            "lastMileTravel": 2.0999999046325684,
-            "slugs": {
-                "restaurant": "mom’s-kitchen-mohanlalganj-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "55/JHA/200 HARIYAR PRASAD NAGAR ALAMBAGH,LUCKNOW",
-            "locality": "Hariyar Prasad Nagar",
-            "parentId": 2594,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "FREE DELIVERY",
-                "shortDescriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "310444",
-                "deliveryTime": 37,
-                "minDeliveryTime": 37,
-                "maxDeliveryTime": 37,
-                "lastMileTravel": 2.0999999046325684,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.7",
-            "totalRatings": 50,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "673474",
-            "name": "Rominus Pizza & Burger",
-            "uuid": "a7b9ced0-8e58-4905-9ef0-bf5204d5edbc",
-            "city": "15",
-            "area": "Vrindavan Colony",
-            "totalRatingsString": "100+ ratings",
-            "cloudinaryImageId": "9ec9ffd900c24ef751e2f34ba3d2fd4b",
-            "cuisines": [
-                "Pizzas",
-                "Burgers",
-                "Desserts"
-            ],
-            "tags": [],
-            "costForTwo": 25000,
-            "costForTwoString": "₹250 FOR TWO",
-            "deliveryTime": 35,
-            "minDeliveryTime": 35,
-            "maxDeliveryTime": 35,
-            "slaString": "35 MINS",
-            "lastMileTravel": 5,
-            "slugs": {
-                "restaurant": "rominus-pizza-&-burger-indira-nagar-indira-nagar",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "UGF ,SCO-03, KAHLON EMPORIUM - II, SECTOR -12, VRINDAVAN VIHAR,  LUCKNOW , Lucknow Tahsil,  Lucknow, Uttar Pradesh, 226025",
-            "locality": "Vrindavan Colony",
-            "parentId": 306135,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "60% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "60% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "60% off up to ₹120 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "60% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "60% off up to ₹120 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=6133251~p=10~eid=00000186-b650-f163-1338-4d7b00e40a57",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "5 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "673474",
-                "deliveryTime": 35,
-                "minDeliveryTime": 35,
-                "maxDeliveryTime": 35,
-                "lastMileTravel": 5,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "4.5",
-            "totalRatings": 100,
-            "new": true
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "310424",
-            "name": "SNACKS STATION",
-            "uuid": "f8fdbc90-010b-40ad-b66f-1e1fd0a5e838",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "20+ ratings",
-            "cloudinaryImageId": "fxlqr3zkgsn5uv9gw5w4",
-            "cuisines": [
-                "Indian"
-            ],
-            "tags": [],
-            "costForTwo": 40000,
-            "costForTwoString": "₹400 FOR TWO",
-            "deliveryTime": 34,
-            "minDeliveryTime": 34,
-            "maxDeliveryTime": 34,
-            "slaString": "34 MINS",
-            "lastMileTravel": 2.0999999046325684,
-            "slugs": {
-                "restaurant": "snacks-station-ashiyana-ashiyana",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "KANCHAN SACHDEVA,551/JHA/200 HARIYAR PRASAD NAGAR,ALAMBAGH,LUCKNOW,UTTAR PRADESH - 226005",
-            "locality": "Hariyar Prasad Nagar",
-            "parentId": 190303,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "FREE DELIVERY",
-                "shortDescriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "310424",
-                "deliveryTime": 34,
-                "minDeliveryTime": 34,
-                "maxDeliveryTime": 34,
-                "lastMileTravel": 2.0999999046325684,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.6",
-            "totalRatings": 20,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "387160",
-            "name": "Laddu Gopal Restaurant",
-            "uuid": "40e7b3e7-94ea-4171-b990-1578b47ca13e",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "100+ ratings",
-            "cloudinaryImageId": "a24yyxn10cvtc79sazsr",
-            "cuisines": [
-                "North Indian"
-            ],
-            "tags": [],
-            "costForTwo": 20000,
-            "costForTwoString": "₹200 FOR TWO",
-            "deliveryTime": 37,
-            "minDeliveryTime": 37,
-            "maxDeliveryTime": 37,
-            "slaString": "37 MINS",
-            "lastMileTravel": 2.799999952316284,
-            "slugs": {
-                "restaurant": "laddu-gopal-restaurant-mohanlalganj-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "Plot No 4, Saraswati Puram Near SGPGI Raibareli Road, Lucknow,226014",
-            "locality": "Raibareli Road",
-            "parentId": 249287,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "30% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "30% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "30% off up to ₹75 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "30% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "30% off up to ₹75 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2.7 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "387160",
-                "deliveryTime": 37,
-                "minDeliveryTime": 37,
-                "maxDeliveryTime": 37,
-                "lastMileTravel": 2.799999952316284,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.7",
-            "totalRatings": 100,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "73283",
-            "name": "Aryan Family's Delight",
-            "uuid": "c2c791b9-7c42-474a-a33d-9a4a4fc0d876",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "5000+ ratings",
-            "cloudinaryImageId": "p7sgeh5fh3pmxpw86byt",
-            "cuisines": [
-                "North Indian",
-                "South Indian",
-                "Chinese",
-                "Italian"
-            ],
-            "tags": [],
-            "costForTwo": 30000,
-            "costForTwoString": "₹300 FOR TWO",
-            "deliveryTime": 37,
-            "minDeliveryTime": 37,
-            "maxDeliveryTime": 37,
-            "slaString": "37 MINS",
-            "lastMileTravel": 5.5,
-            "slugs": {
-                "restaurant": "aryan-familys-delight-ashiyana-ashiyana",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "B-2, SAINIK NAGAR, RAEBARELI ROAD, TELIBAGH",
-            "locality": "Sainik Nagar",
-            "parentId": 6001,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "50% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "50% off | Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "50% off up to ₹100 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "50% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "50% off up to ₹100 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=6087903~p=16~eid=00000186-b650-f163-1338-4d7d00e41021",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "5.5 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "73283",
-                "deliveryTime": 37,
-                "minDeliveryTime": 37,
-                "maxDeliveryTime": 37,
-                "lastMileTravel": 5.5,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "4.1",
-            "totalRatings": 5000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "163890",
-            "name": "pal bhojanalaya",
-            "uuid": "a6e44d71-0106-4402-9a94-66311faefdbf",
-            "city": "15",
-            "area": "Aashiana",
-            "totalRatingsString": "1000+ ratings",
-            "cloudinaryImageId": "euhgzzfvuanvme5b2xtd",
-            "cuisines": [
-                "Indian"
-            ],
-            "tags": [],
-            "costForTwo": 15000,
-            "costForTwoString": "₹150 FOR TWO",
-            "deliveryTime": 33,
-            "minDeliveryTime": 33,
-            "maxDeliveryTime": 33,
-            "slaString": "33 MINS",
-            "lastMileTravel": 2.700000047683716,
-            "slugs": {
-                "restaurant": "pal-bhojanalaya-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "near pgi ,raebarelly road",
-            "locality": "Raibareli Road",
-            "parentId": 153895,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "FREE DELIVERY",
-                "shortDescriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2.7 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "163890",
-                "deliveryTime": 33,
-                "minDeliveryTime": 33,
-                "maxDeliveryTime": 33,
-                "lastMileTravel": 2.700000047683716,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.9",
-            "totalRatings": 1000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "563589",
-            "name": "Shri Balaji Restaurant",
-            "uuid": "60abd92e-fb25-455e-8dd0-33264029f161",
-            "city": "15",
-            "area": "Vrindavan Colony",
-            "totalRatingsString": "20+ ratings",
-            "cloudinaryImageId": "rojvusemft7qvkadg4ex",
-            "cuisines": [
-                "Indian",
-                "Thalis"
-            ],
-            "tags": [],
-            "costForTwo": 20000,
-            "costForTwoString": "₹200 FOR TWO",
-            "deliveryTime": 33,
-            "minDeliveryTime": 33,
-            "maxDeliveryTime": 33,
-            "slaString": "33 MINS",
-            "lastMileTravel": 2.799999952316284,
-            "slugs": {
-                "restaurant": "shri-balaji-restaurant-mohanlalganj-mohanlalganj",
-                "city": "lucknow"
-            },
-            "cityState": "15",
-            "address": "Petrol pump near money maunta complex sgpgi Raibareli road Lucknow, Uttar Pradesh 226014, India",
-            "locality": "Sector 4",
-            "parentId": 186245,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "aggregatedDiscountInfo": {
-                "header": "30% off",
-                "shortDescriptionList": [
-                    {
-                        "meta": "30% off on all orders",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    },
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "30% off on all orders",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    },
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "aggregatedDiscountInfoV2": {
-                "header": "30% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Free Delivery",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "30% off on all orders",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    },
-                    {
-                        "meta": "FREE DELIVERY",
-                        "discountType": "FREE_DELIVERY",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "subHeader": "",
-                "headerType": 0,
-                "superFreedel": ""
-            },
-            "chain": [],
-            "feeDetails": {
-                "fees": [],
-                "totalFees": 0,
-                "message": "",
-                "title": "",
-                "amount": "",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2.7 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "563589",
-                "deliveryTime": 33,
-                "minDeliveryTime": 33,
-                "maxDeliveryTime": 33,
-                "lastMileTravel": 2.799999952316284,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.5",
-            "totalRatings": 20,
-            "new": false
-        },
-        "subtype": "basic"
-    }
-];
-exports.default = restuarantList;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0b04.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restaurant-list",
-        children: Array(10).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, index, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 3,
-                columnNumber: 51
-            }, undefined))
-    }, void 0, false, {
-        fileName: "src/components/Shimmer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$0b04.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Footer"
-    }, void 0, false, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9R1Eu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5b98.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "This page is about us"
-    }, void 0, false, {
-        fileName: "src/components/About.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$5b98.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.9.0
  *
@@ -34779,6 +32693,2575 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire164e")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react"); /* This is named export */ 
+var _constants = require("../constants");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _shimmer = require("./Shimmer"); /* This is default export */ 
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+// Filter the restaurant data according input type
+function filterData(searchInput, restaurants) {
+    const filterData = restaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchInput.toLowerCase()));
+    return filterData;
+}
+// Body Component for body section: It contain all restaurant cards
+const Body = ()=>{
+    _s();
+    // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
+    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
+    const [searchInput, setSearchInput] = (0, _react.useState)("");
+    // use useEffect for one time call getRestaurants using empty dependency array
+    (0, _react.useEffect)(()=>{
+        getRestaurants();
+    }, []);
+    // async function getRestaurant to fetch Swiggy API data
+    async function getRestaurants() {
+        const data = await fetch((0, _constants.swiggy_api_URL));
+        const json = await data.json();
+        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    }
+    // if allRestaurants is empty don't render restaurants cards
+    if (!allRestaurants) return null;
+    return filteredRestaurants?.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 34,
+        columnNumber: 45
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "search-container",
+                        placeholder: "Search",
+                        value: searchInput,
+                        onChange: (e)=>{
+                            setSearchInput(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 36,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "search-btn",
+                        onClick: ()=>{
+                            const data = filterData(searchInput, allRestaurants);
+                            setFilteredRestaurants(data);
+                        },
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 39,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 35,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-list",
+                children: filteredRestaurants.map((restaurant)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/restuarant/" + restaurant.data.id,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                            ...restaurant.data
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 49,
+                            columnNumber: 25
+                        }, undefined)
+                    }, restaurant.data.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 48,
+                        columnNumber: 16
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 46,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "b2RdR+sNAiwoJD1TQYJbfvdtaJ8=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../constants":"3huJa","./RestaurantCard":"bMboU","./Shimmer":"g6ZGj","react-router-dom":"9xmpe"}],"3huJa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "swiggy_api_URL", ()=>swiggy_api_URL);
+parcelHelpers.export(exports, "swiggy_Menu_api_URL", ()=>swiggy_Menu_api_URL);
+parcelHelpers.export(exports, "restuarantList", ()=>restuarantList);
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const swiggy_api_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.1805298&lng=75.8629042&page_type=DESKTOP_WEB_LISTING";
+const swiggy_Menu_api_URL = "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.1805298&lng=75.8629042&restaurantId=";
+const restuarantList = [
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "458201",
+            "name": "KFC",
+            "uuid": "33ccacd2-97a3-4813-887f-5265bb2c13d7",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "500+ ratings",
+            "cloudinaryImageId": "bdcd233971b7c81bf77e1fa4471280eb",
+            "cuisines": [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            "tags": [],
+            "costForTwo": 40000,
+            "costForTwoString": "₹400 FOR TWO",
+            "deliveryTime": 29,
+            "minDeliveryTime": 29,
+            "maxDeliveryTime": 29,
+            "slaString": "29 MINS",
+            "lastMileTravel": 2.799999952316284,
+            "slugs": {
+                "restaurant": "kfc-vrindavan-yojna-1-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "16/CP-201,UGF-Near SGPGI, Vrindavan colony, Lucknow, Uttar Pradesh",
+            "locality": "Vrindavan Twp Main Road",
+            "parentId": 547,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "FREE DELIVERY",
+                "shortDescriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=6136736~p=1~eid=00000186-b650-f163-1338-4d7800e40141",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2.7 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "458201",
+                "deliveryTime": 29,
+                "minDeliveryTime": 29,
+                "maxDeliveryTime": 29,
+                "lastMileTravel": 2.799999952316284,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "4.2",
+            "totalRatings": 500,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "421564",
+            "name": "Pizza Hut",
+            "uuid": "5de229f8-76b2-4d67-847f-91b37ccff22e",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "500+ ratings",
+            "cloudinaryImageId": "sip4j7ih42xql1owikx6",
+            "cuisines": [
+                "Pizzas"
+            ],
+            "tags": [],
+            "costForTwo": 35000,
+            "costForTwoString": "₹350 FOR TWO",
+            "deliveryTime": 32,
+            "minDeliveryTime": 32,
+            "maxDeliveryTime": 32,
+            "slaString": "32 MINS",
+            "lastMileTravel": 2.799999952316284,
+            "slugs": {
+                "restaurant": "pizza-hut-vrindavan-yojn-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "Pizza Hut at Showroom No- 2, 16/ CP-201, UGF, Sector- 16, Vrindavan Colony, Near SGPGI, Rai Bareilly Road,Nagar Nigam Food Safety Zone-10, Lucknow, UP, 226025",
+            "locality": "Sector 16",
+            "parentId": 721,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "FREE DELIVERY",
+                "shortDescriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2.7 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "421564",
+                "deliveryTime": 32,
+                "minDeliveryTime": 32,
+                "maxDeliveryTime": 32,
+                "lastMileTravel": 2.799999952316284,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.5",
+            "totalRatings": 500,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "138854",
+            "name": "Madhurima Veg",
+            "uuid": "e9ded1a7-55d5-49fb-a50e-25ff1e69e09f",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "10000+ ratings",
+            "cloudinaryImageId": "gzflgrln6f3dcylcdxji",
+            "cuisines": [
+                "Indian",
+                "South Indian",
+                "Chinese",
+                "Snacks"
+            ],
+            "tags": [],
+            "costForTwo": 20000,
+            "costForTwoString": "₹200 FOR TWO",
+            "deliveryTime": 41,
+            "minDeliveryTime": 41,
+            "maxDeliveryTime": 41,
+            "slaString": "41 MINS",
+            "lastMileTravel": 3,
+            "slugs": {
+                "restaurant": "madhurima-veg-ashiyana-ashiyana",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "opposite PGI, Telibagh",
+            "locality": "Lucknow - Prayagraj Road",
+            "parentId": 7799,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "40% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "40% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "40% off up to ₹80 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "40% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "40% off up to ₹80 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "3 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "138854",
+                "deliveryTime": 41,
+                "minDeliveryTime": 41,
+                "maxDeliveryTime": 41,
+                "lastMileTravel": 3,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "4.1",
+            "totalRatings": 10000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "164643",
+            "name": "Lucknow Street Food",
+            "uuid": "2676deb7-1085-4371-bd6d-945ccbbf8510",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "1000+ ratings",
+            "cloudinaryImageId": "axbtcwpeshiaovgr4uto",
+            "cuisines": [
+                "Chinese",
+                "Fast Food",
+                "Snacks",
+                "Italian",
+                "Use Code NBC20 to Avail"
+            ],
+            "tags": [],
+            "costForTwo": 15000,
+            "costForTwoString": "₹150 FOR TWO",
+            "deliveryTime": 37,
+            "minDeliveryTime": 37,
+            "maxDeliveryTime": 37,
+            "slaString": "37 MINS",
+            "lastMileTravel": 5.800000190734863,
+            "slugs": {
+                "restaurant": "lucknow-street-food-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "7c/318 Vraindavan colony telibagh lucknow",
+            "locality": "Vraindavan colony",
+            "parentId": 126523,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "50% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "50% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "50% off up to ₹100 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "50% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "50% off up to ₹100 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=6060258~p=4~eid=00000186-b650-f163-1338-4d7900e4047c",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "5.8 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "164643",
+                "deliveryTime": 37,
+                "minDeliveryTime": 37,
+                "maxDeliveryTime": 37,
+                "lastMileTravel": 5.800000190734863,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "3.7",
+            "totalRatings": 1000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "145815",
+            "name": "M&H Bakery by Madhurima",
+            "uuid": "c45ed45c-68df-4d6d-a1e5-bfab0df93a68",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "1000+ ratings",
+            "cloudinaryImageId": "hqbblwmrt8jtir75bxiz",
+            "cuisines": [
+                "Bakery",
+                "Snacks",
+                "Desserts"
+            ],
+            "tags": [],
+            "costForTwo": 20000,
+            "costForTwoString": "₹200 FOR TWO",
+            "deliveryTime": 37,
+            "minDeliveryTime": 37,
+            "maxDeliveryTime": 37,
+            "slaString": "37 MINS",
+            "lastMileTravel": 3,
+            "slugs": {
+                "restaurant": "mh-bakery-by-madhurima-ashiyana-ashiyana",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "opposite PGI, Telibagh",
+            "locality": "Lucknow - Prayagraj Road",
+            "parentId": 8218,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "60% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "60% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "60% off up to ₹120 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "60% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "60% off up to ₹120 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "3 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "145815",
+                "deliveryTime": 37,
+                "minDeliveryTime": 37,
+                "maxDeliveryTime": 37,
+                "lastMileTravel": 3,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "4.3",
+            "totalRatings": 1000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "145817",
+            "name": "Madhurima Sweets",
+            "uuid": "abdec8c8-17d2-4352-94a5-0c5d94154b71",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "5000+ ratings",
+            "cloudinaryImageId": "aivado0ln2ebocreismg",
+            "cuisines": [
+                "Sweets",
+                "Indian",
+                "Desserts",
+                "Snacks"
+            ],
+            "tags": [],
+            "costForTwo": 20000,
+            "costForTwoString": "₹200 FOR TWO",
+            "deliveryTime": 45,
+            "minDeliveryTime": 45,
+            "maxDeliveryTime": 45,
+            "slaString": "45 MINS",
+            "lastMileTravel": 3,
+            "slugs": {
+                "restaurant": "madhurima-sweets-ashiyana-ashiyana",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "opposite PGI, Telibagh",
+            "locality": "Lucknow - Prayagraj Road",
+            "parentId": 8217,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "40% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "40% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "40% off up to ₹80 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "40% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "40% off up to ₹80 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "3 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "145817",
+                "deliveryTime": 45,
+                "minDeliveryTime": 45,
+                "maxDeliveryTime": 45,
+                "lastMileTravel": 3,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "4.3",
+            "totalRatings": 5000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "74901",
+            "name": "Shri Ganpati Sweets & Restaurant",
+            "uuid": "475e0535-38ab-4e9c-add0-f5f925321537",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "10000+ ratings",
+            "cloudinaryImageId": "rfpfbgnw7qjiggcy4epk",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Chinese"
+            ],
+            "tags": [],
+            "costForTwo": 30000,
+            "costForTwoString": "₹300 FOR TWO",
+            "deliveryTime": 35,
+            "minDeliveryTime": 35,
+            "maxDeliveryTime": 35,
+            "slaString": "35 MINS",
+            "lastMileTravel": 4.699999809265137,
+            "slugs": {
+                "restaurant": "shri-ganpati-sweets-restaurant-mohanlalganj-ashiyana",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "Uthrathia Bazar, Near Shaheed Path, Raebareli Road, Lucknow",
+            "locality": "Raebareli Road",
+            "parentId": 11326,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "40% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "40% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "40% off up to ₹80 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "40% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "40% off up to ₹80 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=6102499~p=7~eid=00000186-b650-f163-1338-4d7a00e40730",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "4.6 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "74901",
+                "deliveryTime": 35,
+                "minDeliveryTime": 35,
+                "maxDeliveryTime": 35,
+                "lastMileTravel": 4.699999809265137,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "4.1",
+            "totalRatings": 10000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "311009",
+            "name": "B.com chai wala",
+            "uuid": "8a5ebbcf-2ad2-476f-9a2a-ecf4d4f87c59",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "100+ ratings",
+            "cloudinaryImageId": "cwhgzjubxvew7fqzu7tu",
+            "cuisines": [
+                "Beverages",
+                "Indian"
+            ],
+            "tags": [],
+            "costForTwo": 30000,
+            "costForTwoString": "₹300 FOR TWO",
+            "deliveryTime": 41,
+            "minDeliveryTime": 41,
+            "maxDeliveryTime": 41,
+            "slaString": "41 MINS",
+            "lastMileTravel": 2.0999999046325684,
+            "slugs": {
+                "restaurant": "bun-makhan-chai-mohanlalganj-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "Kanchan Sachdeva, 551/Jha/200 Hariyar Prasad Nagar Alambagh, Lucknow, District - Lucknow, STATE - Uttar Pradesh",
+            "locality": "Hariyar Prasad Nagar",
+            "parentId": 281170,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "FREE DELIVERY",
+                "shortDescriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "311009",
+                "deliveryTime": 41,
+                "minDeliveryTime": 41,
+                "maxDeliveryTime": 41,
+                "lastMileTravel": 2.0999999046325684,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.7",
+            "totalRatings": 100,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "310444",
+            "name": "Mom's Kitchen",
+            "uuid": "200cf4f3-8ae4-4409-be8d-2f112af04ab5",
+            "city": "15",
+            "area": "Alambagh",
+            "totalRatingsString": "50+ ratings",
+            "cloudinaryImageId": "csmqad80krrem8aib9z1",
+            "cuisines": [
+                "Indian"
+            ],
+            "tags": [],
+            "costForTwo": 30000,
+            "costForTwoString": "₹300 FOR TWO",
+            "deliveryTime": 37,
+            "minDeliveryTime": 37,
+            "maxDeliveryTime": 37,
+            "slaString": "37 MINS",
+            "lastMileTravel": 2.0999999046325684,
+            "slugs": {
+                "restaurant": "mom’s-kitchen-mohanlalganj-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "55/JHA/200 HARIYAR PRASAD NAGAR ALAMBAGH,LUCKNOW",
+            "locality": "Hariyar Prasad Nagar",
+            "parentId": 2594,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "FREE DELIVERY",
+                "shortDescriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "310444",
+                "deliveryTime": 37,
+                "minDeliveryTime": 37,
+                "maxDeliveryTime": 37,
+                "lastMileTravel": 2.0999999046325684,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.7",
+            "totalRatings": 50,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "673474",
+            "name": "Rominus Pizza & Burger",
+            "uuid": "a7b9ced0-8e58-4905-9ef0-bf5204d5edbc",
+            "city": "15",
+            "area": "Vrindavan Colony",
+            "totalRatingsString": "100+ ratings",
+            "cloudinaryImageId": "9ec9ffd900c24ef751e2f34ba3d2fd4b",
+            "cuisines": [
+                "Pizzas",
+                "Burgers",
+                "Desserts"
+            ],
+            "tags": [],
+            "costForTwo": 25000,
+            "costForTwoString": "₹250 FOR TWO",
+            "deliveryTime": 35,
+            "minDeliveryTime": 35,
+            "maxDeliveryTime": 35,
+            "slaString": "35 MINS",
+            "lastMileTravel": 5,
+            "slugs": {
+                "restaurant": "rominus-pizza-&-burger-indira-nagar-indira-nagar",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "UGF ,SCO-03, KAHLON EMPORIUM - II, SECTOR -12, VRINDAVAN VIHAR,  LUCKNOW , Lucknow Tahsil,  Lucknow, Uttar Pradesh, 226025",
+            "locality": "Vrindavan Colony",
+            "parentId": 306135,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "60% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "60% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "60% off up to ₹120 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "60% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "60% off up to ₹120 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=6133251~p=10~eid=00000186-b650-f163-1338-4d7b00e40a57",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "5 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "673474",
+                "deliveryTime": 35,
+                "minDeliveryTime": 35,
+                "maxDeliveryTime": 35,
+                "lastMileTravel": 5,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "4.5",
+            "totalRatings": 100,
+            "new": true
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "310424",
+            "name": "SNACKS STATION",
+            "uuid": "f8fdbc90-010b-40ad-b66f-1e1fd0a5e838",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "20+ ratings",
+            "cloudinaryImageId": "fxlqr3zkgsn5uv9gw5w4",
+            "cuisines": [
+                "Indian"
+            ],
+            "tags": [],
+            "costForTwo": 40000,
+            "costForTwoString": "₹400 FOR TWO",
+            "deliveryTime": 34,
+            "minDeliveryTime": 34,
+            "maxDeliveryTime": 34,
+            "slaString": "34 MINS",
+            "lastMileTravel": 2.0999999046325684,
+            "slugs": {
+                "restaurant": "snacks-station-ashiyana-ashiyana",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "KANCHAN SACHDEVA,551/JHA/200 HARIYAR PRASAD NAGAR,ALAMBAGH,LUCKNOW,UTTAR PRADESH - 226005",
+            "locality": "Hariyar Prasad Nagar",
+            "parentId": 190303,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "FREE DELIVERY",
+                "shortDescriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "310424",
+                "deliveryTime": 34,
+                "minDeliveryTime": 34,
+                "maxDeliveryTime": 34,
+                "lastMileTravel": 2.0999999046325684,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.6",
+            "totalRatings": 20,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "387160",
+            "name": "Laddu Gopal Restaurant",
+            "uuid": "40e7b3e7-94ea-4171-b990-1578b47ca13e",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "100+ ratings",
+            "cloudinaryImageId": "a24yyxn10cvtc79sazsr",
+            "cuisines": [
+                "North Indian"
+            ],
+            "tags": [],
+            "costForTwo": 20000,
+            "costForTwoString": "₹200 FOR TWO",
+            "deliveryTime": 37,
+            "minDeliveryTime": 37,
+            "maxDeliveryTime": 37,
+            "slaString": "37 MINS",
+            "lastMileTravel": 2.799999952316284,
+            "slugs": {
+                "restaurant": "laddu-gopal-restaurant-mohanlalganj-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "Plot No 4, Saraswati Puram Near SGPGI Raibareli Road, Lucknow,226014",
+            "locality": "Raibareli Road",
+            "parentId": 249287,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "30% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "30% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "30% off up to ₹75 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "30% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "30% off up to ₹75 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2.7 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "387160",
+                "deliveryTime": 37,
+                "minDeliveryTime": 37,
+                "maxDeliveryTime": 37,
+                "lastMileTravel": 2.799999952316284,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.7",
+            "totalRatings": 100,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "73283",
+            "name": "Aryan Family's Delight",
+            "uuid": "c2c791b9-7c42-474a-a33d-9a4a4fc0d876",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "5000+ ratings",
+            "cloudinaryImageId": "p7sgeh5fh3pmxpw86byt",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Italian"
+            ],
+            "tags": [],
+            "costForTwo": 30000,
+            "costForTwoString": "₹300 FOR TWO",
+            "deliveryTime": 37,
+            "minDeliveryTime": 37,
+            "maxDeliveryTime": 37,
+            "slaString": "37 MINS",
+            "lastMileTravel": 5.5,
+            "slugs": {
+                "restaurant": "aryan-familys-delight-ashiyana-ashiyana",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "B-2, SAINIK NAGAR, RAEBARELI ROAD, TELIBAGH",
+            "locality": "Sainik Nagar",
+            "parentId": 6001,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "50% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "50% off | Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "50% off up to ₹100 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "50% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "50% off up to ₹100 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=6087903~p=16~eid=00000186-b650-f163-1338-4d7d00e41021",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "5.5 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "73283",
+                "deliveryTime": 37,
+                "minDeliveryTime": 37,
+                "maxDeliveryTime": 37,
+                "lastMileTravel": 5.5,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "4.1",
+            "totalRatings": 5000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "163890",
+            "name": "pal bhojanalaya",
+            "uuid": "a6e44d71-0106-4402-9a94-66311faefdbf",
+            "city": "15",
+            "area": "Aashiana",
+            "totalRatingsString": "1000+ ratings",
+            "cloudinaryImageId": "euhgzzfvuanvme5b2xtd",
+            "cuisines": [
+                "Indian"
+            ],
+            "tags": [],
+            "costForTwo": 15000,
+            "costForTwoString": "₹150 FOR TWO",
+            "deliveryTime": 33,
+            "minDeliveryTime": 33,
+            "maxDeliveryTime": 33,
+            "slaString": "33 MINS",
+            "lastMileTravel": 2.700000047683716,
+            "slugs": {
+                "restaurant": "pal-bhojanalaya-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "near pgi ,raebarelly road",
+            "locality": "Raibareli Road",
+            "parentId": 153895,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "FREE DELIVERY",
+                "shortDescriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2.7 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "163890",
+                "deliveryTime": 33,
+                "minDeliveryTime": 33,
+                "maxDeliveryTime": 33,
+                "lastMileTravel": 2.700000047683716,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.9",
+            "totalRatings": 1000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "563589",
+            "name": "Shri Balaji Restaurant",
+            "uuid": "60abd92e-fb25-455e-8dd0-33264029f161",
+            "city": "15",
+            "area": "Vrindavan Colony",
+            "totalRatingsString": "20+ ratings",
+            "cloudinaryImageId": "rojvusemft7qvkadg4ex",
+            "cuisines": [
+                "Indian",
+                "Thalis"
+            ],
+            "tags": [],
+            "costForTwo": 20000,
+            "costForTwoString": "₹200 FOR TWO",
+            "deliveryTime": 33,
+            "minDeliveryTime": 33,
+            "maxDeliveryTime": 33,
+            "slaString": "33 MINS",
+            "lastMileTravel": 2.799999952316284,
+            "slugs": {
+                "restaurant": "shri-balaji-restaurant-mohanlalganj-mohanlalganj",
+                "city": "lucknow"
+            },
+            "cityState": "15",
+            "address": "Petrol pump near money maunta complex sgpgi Raibareli road Lucknow, Uttar Pradesh 226014, India",
+            "locality": "Sector 4",
+            "parentId": 186245,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "aggregatedDiscountInfo": {
+                "header": "30% off",
+                "shortDescriptionList": [
+                    {
+                        "meta": "30% off on all orders",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    },
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "30% off on all orders",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    },
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "aggregatedDiscountInfoV2": {
+                "header": "30% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Free Delivery",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "30% off on all orders",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    },
+                    {
+                        "meta": "FREE DELIVERY",
+                        "discountType": "FREE_DELIVERY",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "subHeader": "",
+                "headerType": 0,
+                "superFreedel": ""
+            },
+            "chain": [],
+            "feeDetails": {
+                "fees": [],
+                "totalFees": 0,
+                "message": "",
+                "title": "",
+                "amount": "",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2.7 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "563589",
+                "deliveryTime": 33,
+                "minDeliveryTime": 33,
+                "maxDeliveryTime": 33,
+                "lastMileTravel": 2.799999952316284,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.5",
+            "totalRatings": 20,
+            "new": false
+        },
+        "subtype": "basic"
+    }
+];
+exports.default = restuarantList;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ffb1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constants = require("../constants");
+const RestaurantCard = ({ name , cuisines , cloudinaryImageId , avgRating  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _constants.IMG_CDN_URL) + cloudinaryImageId
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 10,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines.join(", ")
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    "⭐",
+                    avgRating
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 12,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 8,
+        columnNumber: 10
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../constants":"3huJa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restaurant-list",
+        children: Array(10).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, index, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 3,
+                columnNumber: 51
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9R1Eu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5b98.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _profile = require("./Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
+class About extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        //defining useState in Class Based Component
+        console.log("Parent - constructor");
+    }
+    //this function is the best for API Calls
+    componentDidMount() {
+        console.log("Parent - ComponentDidMount ");
+    }
+    render() {
+        console.log("Parent - Render");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "This page is about us"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {
+                    name: "Piyush"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/About.js",
+            lineNumber: 17,
+            columnNumber: 12
+        }, this);
+    }
+}
+exports.default = About; /**
+ * Parent constructor
+ * Parent Render
+ * Child Constructor
+ * Child Render
+ * Child ComponenetDidMount
+ * Parent ComponenetDidMount
+ * 
+ */ 
+
+  $parcel$ReactRefreshHelpers$5b98.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe","./Profile":"h0rtF"}],"h0rtF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b52a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b52a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+//Defining a Class
+class Profile extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        //this how we define State Variable in Class Based Component
+        this.state = {
+            count: 0,
+            count2: 0,
+            userInfo: {
+                name: "Dummy Username",
+                location: "Dummy Location"
+            }
+        };
+        console.log("Child Constructor");
+    }
+    //API calling using ASYNC
+    async componentDidMount() {
+        console.log("Child componentDidMount");
+        const data = await fetch("https://api.github.com/users/Maverick-PS");
+        const json = await data.json();
+        //This peice of code will set the state variable
+        this.setState({
+            userInfo: json
+        });
+        console.log(json);
+    }
+    //It will update the setState everytime if we hit on count button like in functional component we just passed dependency array for this
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.count != prevState.count) console.log("Child componentDidUpdate count 1");
+        if (this.state.count2 != prevState.count2) console.log("Child componentDidUpdate count 2");
+    }
+    //For cleaning up the mess when we move to another page
+    componentWillUnmount() {
+        console.log("Child componentwillUnMount");
+    }
+    render() {
+        console.log("Child Render");
+        //destructuring state variable
+        const { count , count2  } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "Profile"
+                }, void 0, false, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 56,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: this.state.userInfo.avatar_url
+                }, void 0, false, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 57,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Name: ",
+                        this.state.userInfo.name
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 58,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count: 1,
+                            count2: 2
+                        });
+                    },
+                    children: [
+                        "Count ",
+                        this.state.count
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 59,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Profile.js",
+            lineNumber: 55,
+            columnNumber: 12
+        }, this);
+    }
+}
+exports.default = Profile; /**
+*Parent - constructor
+    Parent - Render
+        Child Constructor
+        Child Render
+
+        DOM is updating
+
+        Child componentDidMount
+        Parent - ComponentDidMount 
+        API : {login: 'Maverick-PS', id: 77110363, node_id: 'MDQ6VXNlcjc3MTEwMzYz', avatar_url: 'https://avatars.githubusercontent.com/u/77110363?v=4', gravatar_id: '', …}
+        Child Render
+        Child ComponentWillUnMount
+ * 
+ * 
+ */ 
+
+  $parcel$ReactRefreshHelpers$b52a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ee46.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "this is contact us page"
+    }, void 0, false, {
+        fileName: "src/components/Contact.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$ee46.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0ba4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const Error = ()=>{
+    _s();
+    const err = (0, _reactRouterDom.useRouteError)();
+    const { status , statusText  } = err;
+    console.log(err);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Ooop!!!!!!"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 10,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Something went wrong"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: status + ":" + statusText
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 12,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Error.js",
+        lineNumber: 9,
+        columnNumber: 10
+    }, undefined);
+};
+_s(Error, "U5GmGaAmh0j0MVy+E8WdBnjlm7s=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8PuJ6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$40d6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$40d6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouter = require("react-router");
+var _constants = require("../constants");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
+const RestaurantMenu = ()=>{
+    _s();
+    const { resId  } = (0, _reactRouter.useParams)();
+    const [restaurant, setRestaurant] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        getRestaurantMenu();
+    }, []);
+    async function getRestaurantMenu() {
+        const data = await fetch((0, _constants.swiggy_Menu_api_URL) + resId + "&submitAction=ENTER");
+        const json = await data.json();
+        // console.log(json.data);
+        setRestaurant(json.data);
+    }
+    return !restaurant ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/RestaurantMenu.js",
+        lineNumber: 20,
+        columnNumber: 24
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "menu",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: [
+                            "RestaurantMenu id: ",
+                            resId
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 22,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: restaurant?.cards[0]?.card?.card?.info?.name
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 23,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _constants.IMG_CDN_URL) + restaurant?.cards[0]?.card?.card?.info?.cloudinaryImageId
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 24,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: restaurant?.cards[0]?.card?.card?.info?.areaName
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 25,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: restaurant?.cards[0]?.card?.card?.info?.city
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 26,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: [
+                            restaurant?.cards[0]?.card?.card?.info?.avgRating,
+                            "⭐"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 27,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: restaurant?.cards[0]?.card?.card?.info?.costForTwoMessage
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 28,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantMenu.js",
+                lineNumber: 21,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Menu"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 31,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        children: Object.values(restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards).map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: item?.card?.info?.name
+                            }, item?.card?.info?.id, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 33,
+                                columnNumber: 139
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 32,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantMenu.js",
+                lineNumber: 30,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantMenu.js",
+        lineNumber: 20,
+        columnNumber: 38
+    }, undefined);
+};
+_s(RestaurantMenu, "r0WpIQq71OpY6IomDfDcwUz/fFg=", false, function() {
+    return [
+        (0, _reactRouter.useParams)
+    ];
+});
+_c = RestaurantMenu;
+exports.default = RestaurantMenu;
+var _c;
+$RefreshReg$(_c, "RestaurantMenu");
+
+  $parcel$ReactRefreshHelpers$40d6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dbWyW","../constants":"3huJa","./Shimmer":"g6ZGj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire164e")
 
 //# sourceMappingURL=index.7271efb6.js.map
