@@ -34832,26 +34832,185 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "This page is about us"
-    }, void 0, false, {
-        fileName: "src/components/About.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _profile = require("./Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
+class About extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        //defining useState in Class Based Component
+        console.log("Parent - constructor");
+    }
+    //this function is the best for API Calls
+    componentDidMount() {
+        console.log("Parent - ComponentDidMount ");
+    }
+    render() {
+        console.log("Parent - Render");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "This page is about us"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {
+                    name: "Piyush"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/About.js",
+            lineNumber: 17,
+            columnNumber: 12
+        }, this);
+    }
+}
+exports.default = About; /**
+ * Parent constructor
+ * Parent Render
+ * Child Constructor
+ * Child Render
+ * Child ComponenetDidMount
+ * Parent ComponenetDidMount
+ * 
+ */ 
 
   $parcel$ReactRefreshHelpers$5b98.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe","./Profile":"h0rtF"}],"h0rtF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b52a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b52a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+//Defining a Class
+class Profile extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        //this how we define State Variable in Class Based Component
+        this.state = {
+            count: 0,
+            count2: 0,
+            userInfo: {
+                name: "Dummy Username",
+                location: "Dummy Location"
+            }
+        };
+        console.log("Child Constructor");
+    }
+    //API calling using ASYNC
+    async componentDidMount() {
+        console.log("Child componentDidMount");
+        const data = await fetch("https://api.github.com/users/Maverick-PS");
+        const json = await data.json();
+        //This peice of code will set the state variable
+        this.setState({
+            userInfo: json
+        });
+        console.log(json);
+    }
+    //It will update the setState everytime if we hit on count button like in functional component we just passed dependency array for this
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.count != prevState.count) console.log("Child componentDidUpdate count 1");
+        if (this.state.count2 != prevState.count2) console.log("Child componentDidUpdate count 2");
+    }
+    //For cleaning up the mess when we move to another page
+    componentWillUnmount() {
+        console.log("Child componentwillUnMount");
+    }
+    render() {
+        console.log("Child Render");
+        //destructuring state variable
+        const { count , count2  } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "Profile"
+                }, void 0, false, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 56,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: this.state.userInfo.avatar_url
+                }, void 0, false, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 57,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Name: ",
+                        this.state.userInfo.name
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 58,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count: 1,
+                            count2: 2
+                        });
+                    },
+                    children: [
+                        "Count ",
+                        this.state.count
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Profile.js",
+                    lineNumber: 59,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Profile.js",
+            lineNumber: 55,
+            columnNumber: 12
+        }, this);
+    }
+}
+exports.default = Profile; /**
+*Parent - constructor
+    Parent - Render
+        Child Constructor
+        Child Render
+
+        DOM is updating
+
+        Child componentDidMount
+        Parent - ComponentDidMount 
+        API : {login: 'Maverick-PS', id: 77110363, node_id: 'MDQ6VXNlcjc3MTEwMzYz', avatar_url: 'https://avatars.githubusercontent.com/u/77110363?v=4', gravatar_id: '', …}
+        Child Render
+        Child ComponentWillUnMount
+ * 
+ * 
+ */ 
+
+  $parcel$ReactRefreshHelpers$b52a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
